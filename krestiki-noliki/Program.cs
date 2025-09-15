@@ -149,20 +149,26 @@ class Program
                 whos_move = !whos_move;
             }
 
-            int[] othersSots = [];
+            bool hasZero = false;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    othersSots.Append(matrix[i, j]);
+                    if (matrix[i, j] == 0)
+                    {
+                        hasZero = true;
+                        break;
+                    }
                 }
+                if (hasZero) break;
             }
 
-            if (!othersSots.Contains(0))
+            if (!hasZero)
             {
                 System.Console.WriteLine("Ничія");
                 is_game = false;
             }
+
 
 
         }

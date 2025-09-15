@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("krestiki-noliki")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10f7c5f3a2c809aecb62dd279ba985ae649c900c")]
 [assembly: System.Reflection.AssemblyProductAttribute("krestiki-noliki")]
 [assembly: System.Reflection.AssemblyTitleAttribute("krestiki-noliki")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

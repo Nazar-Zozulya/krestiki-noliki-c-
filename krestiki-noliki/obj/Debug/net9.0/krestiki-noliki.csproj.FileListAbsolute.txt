@@ -12,3 +12,4 @@ C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\refint\k
 C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.pdb
 C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.genruntimeconfig.cache
 C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\ref\krestiki-noliki.dll
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.sourcelink.json
