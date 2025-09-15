@@ -1,0 +1,14 @@
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\bin\Debug\net9.0\krestiki-noliki.exe
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\bin\Debug\net9.0\krestiki-noliki.deps.json
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\bin\Debug\net9.0\krestiki-noliki.runtimeconfig.json
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\bin\Debug\net9.0\krestiki-noliki.dll
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\bin\Debug\net9.0\krestiki-noliki.pdb
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.AssemblyInfoInputs.cache
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.AssemblyInfo.cs
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.csproj.CoreCompileInputs.cache
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.dll
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\refint\krestiki-noliki.dll
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.pdb
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\krestiki-noliki.genruntimeconfig.cache
+C:\Users\nazar\Desktop\krestiki-noliki\krestiki-noliki\obj\Debug\net9.0\ref\krestiki-noliki.dll
