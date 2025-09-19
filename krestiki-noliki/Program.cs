@@ -14,33 +14,12 @@ class Program
 
         while (is_game)
         {
-            for (int i = 0; i < matrix.Length; i++)
-            {
-                // for (int j = 0; j < 1; j++)
-                // {
-                System.Console.Write(matrix[i] + "|");
-                // }
-                switch (i)
-                {
-                    case 2:
-                        System.Console.WriteLine();
-                        break;
-                    case 5:
-                        System.Console.WriteLine();
-                        break;
-                    case 8:
-                        System.Console.WriteLine();
-                        break;
-                    
-                }
-
-                // System.Console.WriteLine();
-            }
-
+            ScreenDrawing();
             System.Console.WriteLine($"{(whos_move ? 'X' : 'O')} хід, напишіть номер ячейки від 1 до 9 ");
-            string MoveCords = Console.ReadLine();
 
-            int MoveResult = matrix[Convert.ToInt32(MoveCords) -1];
+            int MoveCords = Convert.ToInt32(Console.ReadLine());
+
+            int MoveResult = matrix[MoveCords - 1];
 
             if (MoveResult != 0)
             {
@@ -48,124 +27,28 @@ class Program
             }
             else
             {
-                matrix[Convert.ToInt32(MoveCords) - 1] = whos_move ? 1 : 2;
+                matrix[MoveCords - 1] = whos_move ? 1 : 2;
 
-                System.Console.WriteLine(1);
-
-                // Для Х
-
-                if (matrix[0] == 1 && matrix[1] == 1 && matrix[2] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[3] == 1 && matrix[4] == 1 && matrix[5] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[6] == 1 && matrix[7] == 1 && matrix[8] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[0] == 1 && matrix[3] == 1 && matrix[6] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[1] == 1 && matrix[4] == 1 && matrix[7] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[2] == 1 && matrix[5] == 1 && matrix[8] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[0] == 1 && matrix[4] == 1 && matrix[8] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[2] == 1 && matrix[4] == 1 && matrix[6] == 1)
-                {
-                    System.Console.WriteLine("X вийграв");
-                    is_game = false;
-                }
+                System.Console.WriteLine();
 
 
+                Flex(1);
 
-                // для О
-
-                if (matrix[0] == 2 && matrix[1] == 2 && matrix[2] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[3] == 2 && matrix[4] == 2 && matrix[5] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[6] == 2 && matrix[7] == 2 && matrix[8] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[0] == 2 && matrix[3] == 2 && matrix[6] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[1] == 2 && matrix[4] == 2 && matrix[7] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[2] == 2 && matrix[5] == 2 && matrix[8] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[0] == 2 && matrix[4] == 2 && matrix[8] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
-
-                else if (matrix[2] == 2 && matrix[4] == 2 && matrix[6] == 2)
-                {
-                    System.Console.WriteLine("O вийграв");
-                    is_game = false;
-                }
+                Flex(2);
 
                 whos_move = !whos_move;
             }
 
+
+
             bool hasZero = false;
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int i = 0; i < matrix.Length; i++)
             {
                 if (matrix[i] == 0)
                 {
                     hasZero = true;
                     break;
                 }
-                if (hasZero) break;
             }
 
             if (!hasZero)
@@ -175,7 +58,101 @@ class Program
             }
 
 
+            void Flex(int k)
+            {
+                if (matrix[0] == k && matrix[1] == k && matrix[2] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
 
+                else if (matrix[3] == k && matrix[4] == k && matrix[5] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[6] == k && matrix[7] == k && matrix[8] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[0] == k && matrix[3] == k && matrix[6] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[1] == k && matrix[4] == k && matrix[7] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[2] == k && matrix[5] == k && matrix[8] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[0] == k && matrix[4] == k && matrix[8] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+
+                else if (matrix[2] == k && matrix[4] == k && matrix[6] == k)
+                {
+                    System.Console.WriteLine((k == 1 ? "X" : "O") + " вийграв");
+                    is_game = false;
+                    ScreenDrawing();
+                }
+            }
+
+            void ScreenDrawing()
+            {
+                for (int i = 0; i < matrix.Length; i++)
+                {
+
+
+                    switch (matrix[i])
+                    {
+                        case 1:
+                            System.Console.Write("X" + "|");
+                            break;
+                        case 2:
+                            System.Console.Write("O" + "|");
+                            break;
+                        case 0:
+                            System.Console.Write(matrix[i] + "|");
+                            break;
+
+                            // default:
+                    }
+
+                    switch (i)
+                    {
+                        case 2:
+                            System.Console.WriteLine();
+                            break;
+                        case 5:
+                            System.Console.WriteLine();
+                            break;
+                        case 8:
+                            System.Console.WriteLine();
+                            break;
+                    }
+
+                }
+            }
         }
 
     }
