@@ -17,7 +17,6 @@ class Program
             ScreenDrawing();
 
             int MoveCords = NewMove();
-            System.Console.WriteLine(MoveCords);
 
             if (matrix[MoveCords -1] != 0)
             {
@@ -43,30 +42,26 @@ class Program
 
 
 
-            int NewMove()
-            {
-                System.Console.WriteLine($"{(whos_move ? 'X' : 'O')} хід, напишіть номер ячейки від 1 до 9 ");
+        int NewMove()
+        {
+            System.Console.Write($"{(whos_move ? 'X' : 'O')} хід, напишіть номер ячейки від 1 до 9: ");
 
-                int MoveCords = Convert.ToInt32(Console.ReadLine());
+            int MoveCords = Convert.ToInt32(Console.ReadLine());;
 
-                // System.Console.WriteLine(matrix);
-
-                // int MoveResult = matrix[Convert.ToInt32(Console.ReadLine()) - 1];
-
-                // System.Console.WriteLine(334);
-
-                return MoveCords;
-            }
+            return MoveCords;
+        }
 
         void HasZero()
+        {
+            if (counter == 9)
             {
-                if (counter == 9)
-                {
-                    is_game = false;
+                is_game = false;
 
-                    System.Console.WriteLine("Ничія");
-                }
+                System.Console.WriteLine("Ничія");
             }
+
+            counter++;
+        }
         void isWinning(int k)
         {
             if (matrix[0] == k && matrix[1] == k && matrix[2] == k)
